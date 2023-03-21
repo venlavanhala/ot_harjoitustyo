@@ -1,0 +1,146 @@
+venlavanhala@LAPTOP-0KDHQN9I:/mnt/c/Users/Venla Vanhala/ot_viikko1$ git log --stat | cat
+commit 0968f4c1d54d6b7b680c555e769a2a8655256797
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:54:19 2023 +0200
+
+    poistettu file1 ja uudelleennimetty file2.txt
+
+ tiedostoja/file2.txt                 | 0
+ tiedostoja/{file1.txt => file22.txt} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 15f900b8a603b0fa1d3ff189d8e62883cb861dba
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:48:48 2023 +0200
+
+    tiedostoja lisätty
+
+ tiedostoja/file1.txt | 0
+ tiedostoja/file2.txt | 0
+ tiedostoja/file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3896097a5e96d0d75dedb74d490e30ee4af51293
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:47:24 2023 +0200
+
+    poistettu vialliset tiedostot
+
+ file1.txt | 0
+ file2.txt | 0
+ file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit cb4a8ca25b8ebf386207d73a2792165a6b1fe828
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:43:29 2023 +0200
+
+    lisätty tiedostoja
+
+ file1.txt | 0
+ file2.txt | 0
+ file3.txt | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 30d9bb92af7ff1b538b6e4060b2af922674bca16
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:29:07 2023 +0200
+
+    muokattu eka.txt ja kolmas.txt
+
+ eka.txt    | 3 +--
+ kolmas.txt | 2 +-
+ 2 files changed, 2 insertions(+), 3 deletions(-)
+
+commit f921b5a68891cb779222eb2299a2edce0c316236
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:26:21 2023 +0200
+
+    vaihdettu tiedosto.txt -> eka.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ae885143c181b3a9e516c42ea7f2bc0fb1e12f19
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:25:04 2023 +0200
+
+    poistettu toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit fcccb66284654339e325dc12a7527bb643afd5ab
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:19:11 2023 +0200
+
+    lisätty tiedostoon
+
+ tiedosto.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 567e71e719e2c455222f950043fecae05464e11b
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:17:31 2023 +0200
+
+    lisätty tiedostoon
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 8b7c59c22c1f8f95aa8d48bf34e7f44490f12a4d
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 16:09:52 2023 +0200
+
+    lisätty stuff.txt muokkaus
+
+ stuff/stuff.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 116792882b6db3b6b91f10533b91bdd1964434e6
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 15:52:10 2023 +0200
+
+    stuff lisätty
+
+ stuff/stuff.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 7a9a784bbecef753051097907b7b4a10f57f3da8
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Mon Mar 20 15:50:27 2023 +0200
+
+    toinen.txt ja kolmas.txt muokattu
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 24e3a44a32319351335980b3503bdceaebf57a87
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Sun Mar 19 17:00:55 2023 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a6af2431a177a7b271f029c4ae123c2c3b52048d
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Sun Mar 19 16:43:52 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 6704232c69173031d10b6071900a784414c7b578
+Author: Venla Vanhala <venla.e.vanhala@gmail.com>
+Date:   Sun Mar 19 16:30:48 2023 +0200
+
+    tiedosto txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+venlavanhala@LAPTOP-0KDHQN9I:/mnt/c/Users/Venla Vanhala/ot_viikko1$
