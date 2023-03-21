@@ -4,4 +4,3 @@
 ### Viikko 1
 [gitlog.txt](gitlog.txt)
 [komentorivi.txt](komentorivi.txt)
-### Viikko 2
