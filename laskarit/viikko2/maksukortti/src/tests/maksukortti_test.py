@@ -11,3 +11,10 @@ class TestMaksukortti(unittest.TestCase):
         vastaus = str(kortti)
 
         self.assertEqual(vastaus, "Kortilla on rahaa 10.00 euroa")
+        
+    def test_syo_edullisesti_vahentaa_saldoa_oikein(self):
+        kortti = Maksukortti(1000)
+        kortti.syo_edullisesti()
+
+        self.assertEqual(str(kortti), "Kortilla on rahaa 7.50 euroa")
+            
