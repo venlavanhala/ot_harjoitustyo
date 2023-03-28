@@ -1,5 +1,6 @@
 # Kurssi: Ohjelmistotekniikka
 ## [Vaatimusmäärittely](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+## [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 ## Tehtävät
 ## #Viikko 1
