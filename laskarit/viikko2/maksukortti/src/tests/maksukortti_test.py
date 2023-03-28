@@ -54,3 +54,26 @@ class TestMaksukortti(unittest.TestCase):
         kortti=Maksukortti(400)
 
         self.assertEqual(str(kortti), "Kortilla on rahaa 4.00 euroa")
+
+    def test_saldo_alussa_oikein(self):
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 10.00 euroa")
+
+    def test_saldo_kasvaa_oikein(self):
+        self.kortti.lataa_rahaa(100)
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 11.00 euroa")
+
+    def test_saldo_vahenee(self):
+        self.kortti.syo_maukkaasti()
+
+        self.assertEqual(str(self.kortti), "Kortilla on rahaa 6.00 euroa")
+        return True
+
+    def test_saldo_ei_muutu(self):
+        kortti=Maksukortti(300)
+        kortti.syo_maukkaasti()
+        
+        self.assertEqual(str(kortti), "Kortilla on rahaa 3.00 euroa")
+        return False
+        
+    
