@@ -1,14 +1,13 @@
 [tool.poetry]
-name = "maksukortti"
+name = "ot_harjoitustyo"
 version = "0.1.0"
 description = ""
 authors = ["Venla Vanhala <venla.e.vanhala@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+cowsay = "^5.0"
 pytest = "^7.2.2"
-coverage = "^7.2.2"
-invoke = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 
