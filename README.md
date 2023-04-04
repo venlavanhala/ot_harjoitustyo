@@ -1,5 +1,5 @@
 # Muistio-sovellus
-## Muistion avulla voi merkitä ylös tärkeät asiat ja tarkastella niitä myöhemmin.
+###  Muistion avulla voi merkitä ylös tärkeät asiat ja tarkastella niitä myöhemmin.
 
 
 ## Kurssi: Ohjelmistotekniikka
