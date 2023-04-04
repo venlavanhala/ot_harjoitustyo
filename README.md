@@ -1,8 +1,9 @@
-# Kurssi: Ohjelmistotekniikka
-## [Vaatimusmäärittely](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
-## [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+# Muistio-sovellus
+## Muistion avulla voi merkitä ylös tärkeät asiat ja tarkastella niitä myöhemmin.
 
-## Tehtävät
-### Viikko 1
-[gitlog.txt](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
-[komentorivi.txt](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+
+## Kurssi: Ohjelmistotekniikka
+### [Vaatimusmäärittely](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+### [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+### [Ghangelog](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/changelog.md)
+
