@@ -16,3 +16,9 @@ class NoteTools:
         cursor=self._db.cursor()
         cursor.execute("DELETE* from Notes")
         self._db.commit()
+
+    def all_notes(self, user):
+        cursor=self._db,cursor()
+        every=cursor.execute("SELECT text, day from Notes where user_id=?",[user]).fetchall()
+        return every
+
