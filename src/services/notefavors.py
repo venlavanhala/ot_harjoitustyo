@@ -1,9 +1,9 @@
 from entities.note import Note
 from entities.user import User
 
-from repositories.note_repository import NoteTools
+from repositories.note_repository import note_repository
 
-from repositories.user_repository import UserTools
+from repositories.user_repository import user_repository
 
 class NoteFavors:
     def __init__(self, note_repository, user_repository):
