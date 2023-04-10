@@ -16,4 +16,9 @@ class UserTools:
         cursor.execute("DELETE* from Users")
         self._db.commit()
 
+    def all_users(self):
+        cursor=self._db.cursor()
+        all=cursor.execute("SELECT * from Users").fetchall()
+        self._db.commit()
+        return all
 
