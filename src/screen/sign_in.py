@@ -1,4 +1,4 @@
-from tkinter import ttk, StringVar, constants, Tk
+from tkinter import ttk, Tk
 from services.notefavors import notefavors
 
 class SignInScreen:
@@ -11,15 +11,20 @@ class SignInScreen:
         label=ttk.Label(master=self._root, text="Kirjaudu sisään")
         self._name=ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password=ttk.Entry(master=self._root, text="Salasana")
+        enter=ttk.Button(master=self._root, text="Enter")
         signing=ttk.Button(master=self._root, text="Rekisteröidy")
 
         label.pack()
         self._name.pack()
         self._password.pack()
+        enter.pack()
         signing.pack()
 
     def check(self):
-        pass
+        name=self._name.get()
+        password=self._password.get()
+        notefavours.sign_in(name, password)
+        
         #check if the name and password exist
 
 window = Tk()

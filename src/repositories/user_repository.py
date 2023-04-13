@@ -22,3 +22,8 @@ class UserTools:
         self._db.commit()
         return all
 
+    def find_user(self, sign, word):
+        cursor=self._db.cursor()
+        user=cursor.execute("SELECT name, password from Users where name=? and password=?",[sign, word]).fetchone()
+        self._db.commit()
+        return user

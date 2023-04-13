@@ -15,3 +15,6 @@ class NoteFavors:
         #tarkista ettei ole jo tätä käyttäjänimeä
         create=self._user_repository.new_user(User(name, password))
         return create
+
+    def sign_in(self, name, password):
+        pass
