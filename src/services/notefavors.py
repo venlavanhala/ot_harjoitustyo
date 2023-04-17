@@ -1,9 +1,9 @@
 from entities.note import Note
 from entities.user import User
 
-from repositories.note_repository import note_repository
+from repositories.note_repository import NoteTools
+from repositories.user_repository import UserTools
 
-from repositories.user_repository import user_repository
 
 class NoteFavors:
     def __init__(self, note_repository, user_repository):
@@ -12,9 +12,13 @@ class NoteFavors:
         self._user_repository = user_repository
 
     def sign_up(self, name, password):
-        #tarkista ettei ole jo tätä käyttäjänimeä
-        create=self._user_repository.new_user(User(name, password))
+        # tarkista ettei ole jo tätä käyttäjänimeä
+        create = self._user_repository.new_user(User(name, password))
         return create
 
     def sign_in(self, name, password):
-        pass
+        find=self._user_repository.find_user(name, password)
+        if find!=None:
+            self._user=self._user_repository.find_id(name)
+
+    
