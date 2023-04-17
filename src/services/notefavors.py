@@ -12,13 +12,17 @@ class NoteFavors:
         self._user_repository = user_repository
 
     def sign_up(self, name, password):
-        # tarkista ettei ole jo tätä käyttäjänimeä
-        create = self._user_repository.new_user(User(name, password))
-        return create
+        check=UserTools.check_if_exist(name)
+        if check!=False:
+            create = self._user_repository.new_user(User(name, password))
+            return create
 
     def sign_in(self, name, password):
         find=self._user_repository.find_user(name, password)
         if find!=None:
             self._user=self._user_repository.find_id(name)
+        else:
+            pass
 
     
+        

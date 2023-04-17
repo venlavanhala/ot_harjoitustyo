@@ -25,8 +25,8 @@ class SignInScreen:
         name = self._name.get()
         password = self._password.get()
         NoteFavours.sign_in(name, password)
-
-        # check if the name and password exist
+        
+        
 
 
 window = Tk()

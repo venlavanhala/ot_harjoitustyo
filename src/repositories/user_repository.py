@@ -14,6 +14,13 @@ class UserTools:
         self._db.commit()
         return user
 
+    def check_if_exist(self, name):
+        cursor=self._db.cursor()
+        person=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
+        if id!=None:
+            return False
+
+
     def remove_users(self):
         cursor = self._db.cursor()
         cursor.execute("DELETE* from Users")
@@ -29,5 +36,11 @@ class UserTools:
         cursor = self._db.cursor()
         user = cursor.execute("SELECT name, password from Users where name=? and password=?", [
                               sign, word]).fetchone()
+        self._db.commit()
+        return user
+
+    def find_id(self, name):
+        cursor=self._db.cursor()
+        user=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
         self._db.commit()
         return user
