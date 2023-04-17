@@ -7,8 +7,19 @@ class SignInScreen:
         self._root = root
         self._name = ""
         self._password = ""
+        self._frame=None
+        self._format()
 
-    def view(self):
+    def check(self):
+        name = self._name.get()
+        password = self._password.get()
+        NoteFavours.sign_in(name, password)
+        
+    def remove_screen(self):
+        self._frame.destroy()
+
+    def format(self):
+        self._frame = ttk.Frame(master=self._root)
         label = ttk.Label(master=self._root, text="Kirjaudu sisään")
         self._name = ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password = ttk.Entry(master=self._root, text="Salasana")
@@ -21,18 +32,3 @@ class SignInScreen:
         enter.pack()
         signing.pack()
 
-    def check(self):
-        name = self._name.get()
-        password = self._password.get()
-        NoteFavours.sign_in(name, password)
-        
-        
-
-
-window = Tk()
-window.title("Kirjautuminen")
-
-ui = SignInScreen(window)
-ui.start()
-
-window.mainloop()
