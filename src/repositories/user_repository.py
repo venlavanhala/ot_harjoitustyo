@@ -17,6 +17,7 @@ class UserTools:
     def check_if_exist(self, name):
         cursor=self._database.cursor()
         person=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
+        self._database.commit()
         if person!="None":
             return False
         else:
