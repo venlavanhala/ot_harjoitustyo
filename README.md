@@ -6,4 +6,4 @@
 ### [Vaatimusmäärittely](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
 ### [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 ### [Ghangelog](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/changelog.md)
-
+### [Arkkitehtuuri](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
