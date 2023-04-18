@@ -7,3 +7,10 @@
 ### [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 ### [Ghangelog](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/changelog.md)
 ### [Arkkitehtuuri](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
+## Asennus
+### Käynnistä sovellus komennolla "poetry run invoke start"
+### Testit voidaan suorittaa komennolla "poetry run invoke test"
+### Testikattavuusraportin saa komennolla "poetry run invoke coveragereport"
+### Pylint-tarkistuksien suorittaminen komennolla "poetry run invoke lint"
+
