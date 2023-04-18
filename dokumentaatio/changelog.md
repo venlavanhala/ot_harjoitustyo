@@ -8,3 +8,4 @@
 - Luotu perusta käyttöliittymälle
 - Lisätty metodeja repositories ja services luokkaan
 - Korjattu pylint virheitä
+- Saatu ohjelman käynnistys toimimaan
