@@ -25,4 +25,4 @@ class NoteTools:
             "SELECT text, day from Notes where user_id=?", [user]).fetchall()
         return every
 
-note_repository = UserTools(get_database_connection())
+note_repository = NoteTools(get_database_connection())

@@ -7,13 +7,13 @@ class Interface:
         self._view = None
 
     def start(self):
-        self._sign_view()
+        self.sign_view()
     
     def sign_view(self):
         self._view = SignInScreen(self._root)
 
 window = Tk()
-window.title("User Interface")
+window.title("Muistio")
 
 screen = Interface(window)
 screen.start()

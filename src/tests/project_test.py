@@ -4,7 +4,7 @@ from entities.user import User
 from repositories.user_repository import UserTools
 
 
-class TestUser(unittest.TestCase):
+class TestUserTools(unittest.TestCase):
     def setUp(self):
         self.user=User("Mikko", "kisu123")
 
