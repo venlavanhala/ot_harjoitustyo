@@ -13,16 +13,15 @@ class NoteFavors:
 
     def sign_up(self, name, password):
         check=UserTools.check_if_exist(name)
-        if check!=False:
+        if check!="False":
             create = self._user_repository.new_user(User(name, password))
             return create
+        else:
+            return False
 
     def sign_in(self, name, password):
         find=self._user_repository.find_user(name, password)
-        if find!=None:
+        if find!="None":
             self._user=self._user_repository.find_id(name)
         else:
             pass
-
-    
-        

@@ -8,12 +8,12 @@ class SignInScreen:
         self._name = ""
         self._password = ""
         self._frame=None
-        self._format()
+        self.format()
 
     def check(self):
         name = self._name.get()
         password = self._password.get()
-        NoteFavours.sign_in(name, password)
+        NoteFavors.sign_in(name, password)
         
     def remove_screen(self):
         self._frame.destroy()
