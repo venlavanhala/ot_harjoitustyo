@@ -4,3 +4,5 @@
 - 2h repositories-kansion muokkaus
 - 4h käyttöliittymän suunnittelu
 - 3h funktioiden tekeminen ja suunnittelu
+- 3h  tkinteriin tutustuminen ja sen käyttö
+- yhteensä 16 tuntia
