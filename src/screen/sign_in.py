@@ -1,4 +1,4 @@
-from tkinter import ttk, Tk
+from tkinter import ttk, constants
 from services.notefavors import NoteFavors
 
 
@@ -23,6 +23,9 @@ class SignInScreen:
         except:
             pass
         
+    def pack(self):
+        self._frame.pack(fill=constants.X)
+
     def remove_screen(self):
         self._frame.destroy()
 
@@ -34,7 +37,6 @@ class SignInScreen:
         enter = ttk.Button(master=self._root, text="Enter")
         signing = ttk.Button(master=self._root, text="Rekisteröidy")
 
-        self._frame.pack()
         label.pack()
         self._name.pack()
         self._password.pack()

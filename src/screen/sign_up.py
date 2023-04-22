@@ -17,6 +17,9 @@ class SignUpScreen:
         except:
             pass
 
+    def pack(self):
+        self._frame.pack(fill=constants.X)            
+
     def remove_screen(self):
         self._frame.destroy()
 
@@ -28,7 +31,6 @@ class SignUpScreen:
         enter=ttk.Button(master=self._root, text="Luo")
         signing=ttk.Button(master=self._root, text="Kirjaudu sisään")
 
-        self._frame.pack()
         label.pack()
         self._username.pack()
         self._password.pack()
