@@ -32,13 +32,13 @@ class SignInScreen:
     def format(self):
         self._frame = ttk.Frame(master=self._root)
         label = ttk.Label(master=self._root, text="Kirjaudu sisään")
-        self._name = ttk.Entry(master=self._root, text="Käyttäjänimi")
+        self._username = ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password = ttk.Entry(master=self._root, text="Salasana")
-        enter = ttk.Button(master=self._root, text="Enter")
-        signing = ttk.Button(master=self._root, text="Rekisteröidy")
+        enter = ttk.Button(master=self._root, text="Enter", command=self.signin())
+        signing = ttk.Button(master=self._root, text="Rekisteröidy", command=self.signup)
 
         label.pack()
-        self._name.pack()
+        self._username.pack()
         self._password.pack()
         enter.pack()
         signing.pack()

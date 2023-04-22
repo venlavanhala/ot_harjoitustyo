@@ -11,7 +11,7 @@ class Interface:
     
     def remove_view(self):
         if self._view:
-            self._view.destroy()
+            self._view.remove_screen()
 
         self._view = None
 
