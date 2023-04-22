@@ -12,13 +12,11 @@ class NoteScreen:
     def remove_screen(self):
         self._frame.destroy()
 
-    def show_note(self, note):
-        pass
-
     def format(self):
         self._frame=ttk.Frame(master=self._root)
         header=ttk.Label(master=self._root, text="Muistiinpanosi")
         for note in self._notes:
-            self.show_note(note)
-
+            content=ttk.Label(master=self._root, text=note.text)
+            content.pack()
         header.pack()
+        self._frame.pack()
