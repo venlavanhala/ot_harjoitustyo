@@ -8,8 +8,8 @@ class SignInScreen:
         self._name = ""
         self._password = ""
         self._frame=None
-        self._username=username
-        self._password=password
+        self._username=None
+        self._password=None
         self.login=login
         self.signup=signup
         self.format()

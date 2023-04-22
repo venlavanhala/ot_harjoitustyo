@@ -8,11 +8,15 @@ class UserTools:
         self._database = database
 
     def new_user(self, user:User):
-        cursor = self._database.cursor()
-        cursor.execute("INSERT into Users (name, password) values (?,?)", [
-                       user.name, user.password])
-        self._database.commit()
-        return user
+        if len(user.name)>0 and len(user.password)>0:
+            cursor = self._database.cursor()
+            cursor.execute("INSERT into Users (name, password) values (?,?)", [
+                        user.name, user.password])
+            self._database.commit()
+            return user
+        else:
+            return False
+        
 
     def check_if_exist(self, name):
         cursor=self._database.cursor()

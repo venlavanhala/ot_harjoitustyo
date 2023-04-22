@@ -8,11 +8,11 @@ from repositories.user_repository import UserTools
 class NoteFavors:
     def __init__(self, note_repository, user_repository):
         self._user = None
-        self._note_repository = note_repository
-        self._user_repository = user_repository
+        self._note_repository = NoteTools
+        self._user_repository = UserTools
 
     def sign_up(self, name, password):
-        check=UserTools.check_if_exist(name)
+        check=self._user_reporitory.check_if_exist(name)
         if check!="False":
             create = self._user_repository.new_user(User(name, password))
             return create
@@ -25,3 +25,11 @@ class NoteFavors:
             self._user=self._user_repository.find_id(name)
         else:
             pass
+
+    def return_notes(self, user):
+        if not self._user:
+            return []
+        else:
+            notes=self._note_repository.all_notes(user)
+            return list(notes)
+
