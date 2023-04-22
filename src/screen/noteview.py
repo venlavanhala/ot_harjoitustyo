@@ -1,4 +1,4 @@
-from tkinter import ttk
+from tkinter import ttk, constants
 from services.notefavors import NoteFavors
 
 class NoteScreen:

@@ -14,9 +14,6 @@ class UserTools:
                         user.name, user.password])
             self._database.commit()
             return user
-        else:
-            return False
-        
 
     def check_if_exist(self, name):
         cursor=self._database.cursor()
@@ -24,8 +21,6 @@ class UserTools:
         self._database.commit()
         if person!="None":
             return False
-        else:
-            return True
 
     def remove_users(self):
         cursor = self._database.cursor()
@@ -50,5 +45,5 @@ class UserTools:
         user=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
         self._database.commit()
         return user
-    
+
 user_repository=UserTools(get_database_connection())

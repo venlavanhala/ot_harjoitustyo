@@ -22,7 +22,7 @@ class SignInScreen:
             self.login()
         except:
             pass
-        
+ 
     def pack(self):
         self._frame.pack(fill=constants.X)
 
@@ -42,4 +42,3 @@ class SignInScreen:
         self._password.pack()
         enter.pack()
         signing.pack()
-

@@ -1,4 +1,4 @@
-from tkinter import ttk
+from tkinter import ttk, constants
 from services.notefavors import NoteFavors
 
 class SignUpScreen:
@@ -18,7 +18,7 @@ class SignUpScreen:
             pass
 
     def pack(self):
-        self._frame.pack(fill=constants.X)            
+        self._frame.pack(fill=constants.X)
 
     def remove_screen(self):
         self._frame.destroy()
@@ -36,4 +36,3 @@ class SignUpScreen:
         self._password.pack()
         enter.pack()
         signing.pack()
-

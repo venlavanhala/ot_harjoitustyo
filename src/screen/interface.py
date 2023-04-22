@@ -1,5 +1,7 @@
 from tkinter import Tk
 from screen.sign_in import SignInScreen
+from screen.sign_up import SignUpScreen
+from screen.noteview import NoteScreen
 
 class Interface:
     def __init__(self, root):
@@ -8,7 +10,7 @@ class Interface:
 
     def start(self):
         self.sign_view()
-    
+
     def remove_view(self):
         if self._view:
             self._view.remove_screen()
