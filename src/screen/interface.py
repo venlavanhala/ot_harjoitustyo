@@ -24,12 +24,12 @@ class Interface:
 
     def note_view(self):
         self.remove_view()
-        self._view=NoteScreen(self._root)
+        self._view=NoteScreen(self._root, self.sign_view)
         self._view.pack()
 
     def signup_view(self):
         self.remove_view()
-        self._view=SignUpScreen(self._root)
+        self._view=SignUpScreen(self._root, self.sign_view)
         self._view.pack()
 
 

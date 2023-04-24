@@ -17,6 +17,9 @@ class NoteFavors:
             create = self._user_repository.new_user(User(name, password))
             return create
 
+    def current_user(self):
+        return self._user
+
     def sign_in(self, name, password):
         find=self._user_repository.find_user(name, password)
         if find!="None":

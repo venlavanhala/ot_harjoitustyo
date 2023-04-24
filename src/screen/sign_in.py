@@ -19,7 +19,7 @@ class SignInScreen:
         password = self._password.get()
         try:
             NoteFavors.sign_in(name, password)
-            self.login()
+            self.login
         except:
             pass
  
@@ -34,7 +34,7 @@ class SignInScreen:
         label = ttk.Label(master=self._root, text="Kirjaudu sisään")
         self._username = ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password = ttk.Entry(master=self._root, text="Salasana")
-        enter = ttk.Button(master=self._root, text="Enter", command=self.signin())
+        enter = ttk.Button(master=self._root, text="Enter", command=self.signin)
         signing = ttk.Button(master=self._root, text="Rekisteröidy", command=self.signup)
 
         label.pack()

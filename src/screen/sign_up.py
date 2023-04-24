@@ -2,11 +2,12 @@ from tkinter import ttk, constants
 from services.notefavors import NoteFavors
 
 class SignUpScreen:
-    def __init__(self, root):
+    def __init__(self, root, login):
         self._root=root
         self._frame=None
         self._username=None
         self._password=None
+        self.login=login
         self.format()
 
     def create_user(self):
@@ -29,7 +30,7 @@ class SignUpScreen:
         self._username=ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password=ttk.Entry(master=self._root, text="Salasana")
         enter=ttk.Button(master=self._root, text="Luo")
-        signing=ttk.Button(master=self._root, text="Kirjaudu sisään")
+        signing=ttk.Button(master=self._root, text="Kirjaudu sisään", command=self.login)
 
         label.pack()
         self._username.pack()
