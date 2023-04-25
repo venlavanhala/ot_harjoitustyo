@@ -31,3 +31,7 @@ class NoteFavors:
         else:
             notes=self._note_repository.all_notes(user)
             return list(notes)
+
+    def new_note(self, content):
+        note=Note(self._user, content)
+        NoteTools.new_note(note)

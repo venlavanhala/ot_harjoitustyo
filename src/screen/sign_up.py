@@ -29,7 +29,7 @@ class SignUpScreen:
         label=ttk.Label(master=self._root, text="Uuden käyttäjän luonti")
         self._username=ttk.Entry(master=self._root, text="Käyttäjänimi")
         self._password=ttk.Entry(master=self._root, text="Salasana")
-        enter=ttk.Button(master=self._root, text="Luo")
+        enter=ttk.Button(master=self._root, text="Luo", command=self.create_user)
         signing=ttk.Button(master=self._root, text="Kirjaudu sisään", command=self.login)
 
         label.pack()
