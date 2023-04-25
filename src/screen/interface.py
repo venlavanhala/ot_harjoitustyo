@@ -23,7 +23,7 @@ class Interface:
 
     def note_view(self):
         self.remove_view()
-        self._view=NoteScreen(self._root, self.sign_view, self.sign_view)
+        self._view=NoteScreen(self._root, self.sign_view)
         self._view.pack()
 
     def signup_view(self):
@@ -32,10 +32,10 @@ class Interface:
         self._view.pack()
 
 
-window = Tk()
-window.title("Muistio")
+#window = Tk()
+#window.title("Muistio")
 
-screen = Interface(window)
-screen.start()
+#screen = Interface(window)
+#screen.start()
 
-window.mainloop()
+#window.mainloop()

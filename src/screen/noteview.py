@@ -4,9 +4,10 @@ from services.notefavors import NoteFavors
 class NoteScreen:
     def __init__(self, root, logout):
         self._root=root
-        self._notes=None
         self._frame=None
-        self._user=NoteFavors.current_user
+        favors=NoteFavors()
+        self._user=favors.current_user()
+        self._notes=favors.return_notes(self._user)
         self.logout=logout
         self.newnote=None
         self.format()
@@ -14,8 +15,8 @@ class NoteScreen:
     def remove_screen(self):
         self._frame.destroy()
 
-    def all_notes(self):
-        self._notes=NoteFavors.return_notes(self._user)
+    #def all_notes(self):
+        #self._notes=NoteFavors.return_notes(self._user)
 
     def new_note(self):
         content=self.newnote.get()
@@ -25,9 +26,8 @@ class NoteScreen:
         self._frame.pack(fill=constants.X)
 
     def format(self):
-        self.all_notes
         header=ttk.Label(master=self._root, text="Muistiinpanosi")
-        self.all_notes
+        #self.all_notes()
         for note in self._notes:
             content=ttk.Label(master=self._root, text=note.text)
             content.pack()

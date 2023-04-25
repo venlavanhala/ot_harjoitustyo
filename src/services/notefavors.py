@@ -23,7 +23,7 @@ class NoteFavors:
     def sign_in(self, name, password):
         find=self._user_repository.find_user(name, password)
         if find!="None":
-            self._user=self._user_repository.find_id(name)
+            self._user=find
 
     def return_notes(self, user):
         if not self._user:
