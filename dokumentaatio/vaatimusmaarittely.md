@@ -9,12 +9,12 @@ Ennen kirjautumista:
 - Muistioon voidaan rekisteröityä käyttäjätunnuksella, joka on 3-10 kirjainta pitkä. REKISTERÖINTI OSIN TEHTY
 - Salasanan täytyy olla vähintään 5 merkkiä pitkä.
 - Kirjautuminen onnistuu käyttäjätunnuksella ja salasanalla OSIN TEHTY
-- Jos jompikumpi menee väärin, niin kirjautuminen ei onnistu ja tulee virheviesti
+- Jos jompikumpi menee väärin, niin kirjautuminen ei onnistu ja tulee virheviesti KIRJAUTUMISEN TARKISTUS TEHTY
 
 Kirjautumisen jälkeen:
-- Käyttäjä voi luoda uuden muistiinpanon tai tutkia vanhoja muistiinpanoja
+- Käyttäjä voi luoda uuden muistiinpanon tai tutkia vanhoja muistiinpanoja OSIN TEHTY
 - Uusi muistiinpano luodaan kirjoittamalla viesti ja tallentamalla se OSIN TEHTY
-- Muistiinpanot tallennetaan käyttäjätunnuksen ja päivämäärän kanssa OSIN TEHTY
+- Muistiinpanot tallennetaan käyttäjätunnuksen ja päivämäärän kanssa TEHTY
 
 ## Jatkokehitysideat
 - Muistiinpanoja voisi hakea päivämäärän perusteella
