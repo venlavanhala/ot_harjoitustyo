@@ -16,7 +16,7 @@ class SignUpScreen:
         try:
             NoteFavors.sign_up(name, password)
         except:
-            pass
+            raise Exception("Samanniminen käyttäjä on jo olemassa")
 
     def pack(self):
         self._frame.pack(fill=constants.X)

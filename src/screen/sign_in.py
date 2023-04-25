@@ -21,8 +21,8 @@ class SignInScreen:
             NoteFavors.sign_in(name, password)
             self.login
         except:
-            pass
- 
+            raise Exception("Kirjautuminen ei onnistunut")
+
     def pack(self):
         self._frame.pack(fill=constants.X)
 

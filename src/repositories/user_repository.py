@@ -14,13 +14,14 @@ class UserTools:
                         user.name, user.password])
             self._database.commit()
             return user
+        else:
+            raise Exception("Käyttäjänimi tai salasana eivät saa olla tyhjiä")
 
     def check_if_exist(self, name):
         cursor=self._database.cursor()
         person=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
         self._database.commit()
-        if person!="None":
-            return False
+        return person!=None
 
     def remove_users(self):
         cursor = self._database.cursor()

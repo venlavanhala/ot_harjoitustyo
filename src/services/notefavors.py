@@ -13,9 +13,11 @@ class NoteFavors:
 
     def sign_up(self, name, password):
         check=self._user_repository.check_if_exist(name)
-        if check!="False":
+        if check==False:
             create = self._user_repository.new_user(User(name, password))
             return create
+        else:
+            raise Exception("Käyttäjä on jo olemassa")
 
     def current_user(self):
         return self._user
@@ -24,9 +26,11 @@ class NoteFavors:
         find=self._user_repository.find_user(name, password)
         if find!="None":
             self._user=find
+        else:
+            raise Exception("Käyttäjää ei löytynyt")
 
     def return_notes(self, user):
-        if not self._user:
+        if user!=self._user:
             return []
         else:
             notes=self._note_repository.all_notes(user)

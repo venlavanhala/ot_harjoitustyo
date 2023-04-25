@@ -32,9 +32,9 @@ class NoteScreen:
             content=ttk.Label(master=self._root, text=note.text)
             content.pack()
         new=ttk.Label(master=self._root, text="Uusi muistiinpano")
-        self.newnote=ttk.Entry(master=self._root, text="teksti: ", command=self.new_note)
+        self.newnote=ttk.Entry(master=self._root, text="teksti: ")
+        self.new_note
         out=ttk.Button(master=self._root, text="Kirjaudu ulos", command=self.logout)
         new.pack()
         header.pack()
         out.pack()
-

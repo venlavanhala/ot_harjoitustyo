@@ -1,4 +1,4 @@
-from tkinter import Tk
+
 from screen.sign_in import SignInScreen
 from screen.sign_up import SignUpScreen
 from screen.noteview import NoteScreen
