@@ -9,3 +9,8 @@
 - Lisätty metodeja repositories ja services luokkaan
 - Korjattu pylint virheitä
 - Saatu ohjelman käynnistys toimimaan
+
+## Viikko 5
+- Luotu käyttöliittymään lisää toiminnallisuutta, muun muassa näkymien vaihtuminen
+- Korjattu ja muokattu toimivammaksi kirjautumis- ja rekisteröintifunktioita
+- Tehty lisää yhteyksiä services- ja repositories-luokkien välille
