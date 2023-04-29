@@ -1,15 +1,15 @@
 from entities.note import Note
 from entities.user import User
 
-from repositories.note_repository import NoteTools
-from repositories.user_repository import UserTools
+from repositories.note_repository import note_repository
+from repositories.user_repository import user_repository
 
 
 class NoteFavors:
     def __init__(self):
         self._user = None
-        self._note_repository = NoteTools
-        self._user_repository = UserTools
+        self._note_repository = note_repository
+        self._user_repository = user_repository
 
     def sign_up(self, name, password):
         check=self._user_repository.check_if_exist(name)
@@ -40,3 +40,5 @@ class NoteFavors:
         note=Note(self._user, content)
         NoteTools.new_note(note)
         return note
+
+notefavors=NoteFavors()

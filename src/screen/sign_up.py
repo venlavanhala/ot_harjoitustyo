@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from services.notefavors import NoteFavors
+from services.notefavors import notefavors
 
 class SignUpScreen:
     def __init__(self, root, login):
@@ -13,10 +13,9 @@ class SignUpScreen:
     def create_user(self):
         name=self._username.get()
         password=self._password.get()
-        try:
-            NoteFavors.sign_up(name, password)
-        except:
-            raise Exception("Samanniminen käyttäjä on jo olemassa")
+        notefavors.sign_up(name, password)
+        #except:
+            #raise Exception("Samanniminen käyttäjä on jo olemassa")
 
     def pack(self):
         self._frame.pack(fill=constants.X)

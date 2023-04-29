@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from services.notefavors import NoteFavors
+from services.notefavors import notefavors
 
 
 class SignInScreen:
@@ -18,7 +18,7 @@ class SignInScreen:
         name = self._username.get()
         password = self._password.get()
         try:
-            NoteFavors.sign_in(name, password)
+            notefavors.sign_in(name, password)
             self.login
         except:
             raise Exception("Kirjautuminen ei onnistunut")

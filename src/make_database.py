@@ -24,3 +24,6 @@ def make_new_tables():
     database = get_database_connection()
     remove_tables(database)
     create_tables(database)
+
+if __name__=="__main__":
+    make_new_tables()
