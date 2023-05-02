@@ -14,12 +14,12 @@
 
 ## Asennus
 
-Lataa poetry komennolla *poetry install*
-Alusta ohjelma komennolla *poetry run invoke build*
-Käynnistä sovellus komennolla *poetry run invoke start*
+- Lataa poetry komennolla *poetry install*
+- Alusta ohjelma komennolla *poetry run invoke build*
+- Käynnistä sovellus komennolla *poetry run invoke start*
 
 ## Muut komennot
 
-Testit voidaan suorittaa komennolla *poetry run invoke test*
-Testikattavuusraportin saa komennolla *poetry run invoke coveragereport*
-Pylint-tarkistuksien suorittaminen komennolla *poetry run invoke lint*
+- Testit voidaan suorittaa komennolla *poetry run invoke test*
+- Testikattavuusraportin saa komennolla *poetry run invoke coveragereport*
+- Pylint-tarkistuksien suorittaminen komennolla *poetry run invoke lint*
