@@ -14,3 +14,8 @@
 - Luotu käyttöliittymään lisää toiminnallisuutta, muun muassa näkymien vaihtuminen
 - Korjattu ja muokattu toimivammaksi kirjautumis- ja rekisteröintifunktioita
 - Tehty lisää yhteyksiä services- ja repositories-luokkien välille
+
+## Viikko 6
+- Saatu Muistiinpano-näyttö näkymään
+- Luotu komento ohjelman alustamiselle
+- Tehty korjauksia toiminnallisuuksiin
