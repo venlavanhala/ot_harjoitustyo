@@ -9,8 +9,8 @@ class NoteTools:
 
     def new_note(self, note:Note):
         cursor = self._database.cursor()
-        cursor.execute("INSERT into Notes (user, text, time) values (?,?,?)", [
-                       note.user, note.text, note.time])
+        cursor.execute("INSERT into Notes (user, time, text) values (?,?,?)", [
+                       note.user, note.time, note.text])
         self._database.commit()
         return note
 
