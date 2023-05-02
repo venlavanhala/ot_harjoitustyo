@@ -10,8 +10,10 @@
 ### [Release](https://github.com/venlavanhala/ot_harjoitustyo/releases/tag/viikko5)
 
 ## Asennus
-### Käynnistä sovellus komennolla "poetry run invoke start"
-### Testit voidaan suorittaa komennolla "poetry run invoke test"
-### Testikattavuusraportin saa komennolla "poetry run invoke coveragereport"
-### Pylint-tarkistuksien suorittaminen komennolla "poetry run invoke lint"
+##### Lataa poetry komennolla "poetry install"
+##### Alusta ohjelma komennolla "poetry run invoke build"
+##### Käynnistä sovellus komennolla "poetry run invoke start"
+##### Testit voidaan suorittaa komennolla "poetry run invoke test"
+##### Testikattavuusraportin saa komennolla "poetry run invoke coveragereport"
+##### Pylint-tarkistuksien suorittaminen komennolla "poetry run invoke lint"
 
