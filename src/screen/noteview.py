@@ -35,6 +35,7 @@ class NoteScreen:
         self.newnote=ttk.Entry(master=self._root, text="teksti: ")
         self.new_note
         out=ttk.Button(master=self._root, text="Kirjaudu ulos", command=self.logout)
-        new.pack()
         header.pack()
+        new.pack()
+        self.newnote.pack()
         out.pack()

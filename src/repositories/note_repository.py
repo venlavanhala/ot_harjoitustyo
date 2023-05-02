@@ -9,7 +9,7 @@ class NoteTools:
 
     def new_note(self, note:Note):
         cursor = self._database.cursor()
-        cursor.execute("INSERT into Notes (user, time, text) values (?,?,?)", [
+        cursor.execute("INSERT into Notes (user, day, content) values (?,?,?)", [
                        note.user, note.time, note.text])
         self._database.commit()
         return note
@@ -21,8 +21,7 @@ class NoteTools:
 
     def all_notes(self, user):
         cursor = self._database.cursor()
-        every = cursor.execute(
-            "SELECT text, day from Notes where user_id=?", [user]).fetchall()
+        every = cursor.execute("SELECT day, content from Notes where user_id=?", [user]).fetchall()
         return every
 
 note_repository = NoteTools(get_database_connection())
