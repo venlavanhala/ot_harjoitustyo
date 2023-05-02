@@ -9,6 +9,10 @@ def test(ctx):
 	ctx.run("pytest src", pty=True)
 
 @task
+def build(ctx):
+	ctx.run("python3 src/build.py", pty=True)
+
+@task
 def coveragereport(ctx):
 	ctx.run("coverage run --branch -m pytest src", pty=True)
 	ctx.run("coverage html", pty=True)
