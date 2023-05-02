@@ -4,10 +4,24 @@ from entities.note import Note
 
 
 class NoteTools:
+    """
+    Luokka, joka vastaa tietokannan käsittelystä
+    """
     def __init__(self, database):
         self._database = database
 
+        """
+        Database on tietokantayhteyden olio
+        """
+
     def new_note(self, note:Note):
+        """
+        Args:
+            note (Note) eli yksi uusi muistiinpano
+
+        Returns:
+            note eli muistiinpano
+        """
         cursor = self._database.cursor()
         cursor.execute("INSERT into Notes (user, day, content) values (?,?,?)", [
                        note.user, note.time, note.text])

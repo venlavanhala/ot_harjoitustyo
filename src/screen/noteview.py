@@ -26,6 +26,7 @@ class NoteScreen:
         self._frame.pack(fill=constants.X)
 
     def format(self):
+        self._frame = ttk.Frame(master=self._root)
         header=ttk.Label(master=self._root, text="Muistiinpanosi")
         #self.all_notes()
         for note in self._notes:
@@ -33,9 +34,10 @@ class NoteScreen:
             content.pack()
         new=ttk.Label(master=self._root, text="Uusi muistiinpano")
         self.newnote=ttk.Entry(master=self._root, text="teksti: ")
-        self.new_note
+        enter=ttk.Button(master=self._root, text="Enter", command=self.new_note)
         out=ttk.Button(master=self._root, text="Kirjaudu ulos", command=self.logout)
         header.pack()
         new.pack()
         self.newnote.pack()
+        enter.pack()
         out.pack()

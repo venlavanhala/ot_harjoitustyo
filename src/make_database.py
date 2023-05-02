@@ -2,6 +2,9 @@ from connect_database import get_database_connection
 
 
 def remove_tables(database):
+    """
+    Poistaa tietokantataulut
+    """
     cursor = database.cursor()
 
     cursor.execute("drop table if exists Users")
@@ -11,6 +14,9 @@ def remove_tables(database):
 
 
 def create_tables(database):
+    """
+    Luo uudet tietokantataulut
+    """
     cursor = database.cursor()
     cursor.execute("CREATE table Users (id integer primary key, name text, password text)")
     cursor.execute("CREATE table Notes (id integer primary key, " +
@@ -19,6 +25,9 @@ def create_tables(database):
 
 
 def make_new_tables():
+    """
+    Poistaa ja luo taulut
+    """
     database = get_database_connection()
     remove_tables(database)
     create_tables(database)
