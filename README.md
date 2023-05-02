@@ -10,7 +10,7 @@
 #### [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 #### [Ghangelog](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/changelog.md)
 #### [Arkkitehtuuri](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
-#### [Release](https://github.com/venlavanhala/ot_harjoitustyo/releases/tag/viikko5)
+#### [Release](https://github.com/venlavanhala/ot_harjoitustyo/releases/tag/viikko6)
 
 ## Asennus
 
