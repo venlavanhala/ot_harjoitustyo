@@ -4,10 +4,30 @@ from entities.user import User
 
 
 class UserTools:
+    """
+    UserTools-luokka vastaa Users-tietokantataulun käsittelystä
+    """
     def __init__(self, database):
+        """
+        Luokan UserTools konstruktori
+
+        Args:
+            database: Tietokantayhteyden olio
+        """
         self._database = database
 
     def new_user(self, user:User):
+        """Metodi lisää uuden käyttäjän tietokantaan
+
+        Args:
+            user (User)
+
+        Raises:
+            Exception: Palauttaa virheviestin, jos on tyhjiä kenttiä
+
+        Returns:
+            user (User)
+        """
         if len(user.name)>0 and len(user.password)>0:
             cursor = self._database.cursor()
             cursor.execute("INSERT into Users (name, password) values (?,?)", [

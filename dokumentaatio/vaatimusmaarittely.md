@@ -6,10 +6,10 @@ Kaikki käyttäjäroolit ovat samoja.
 ## Suunnitellut toiminnallisuudet
 
 Ennen kirjautumista:
-- Muistioon voidaan rekisteröityä käyttäjätunnuksella, joka on 3-10 kirjainta pitkä. REKISTERÖINTI OSIN TEHTY
-- Salasanan täytyy olla vähintään 5 merkkiä pitkä.
+- Muistioon voidaan rekisteröityä käyttäjätunnuksella, joka on vähintään yksi merkkiä pitkä TEHTY
+- Salasana ei saa olla tyhjä TEHTY
 - Kirjautuminen onnistuu käyttäjätunnuksella ja salasanalla OSIN TEHTY
-- Jos jompikumpi menee väärin, niin kirjautuminen ei onnistu ja tulee virheviesti KIRJAUTUMISEN TARKISTUS TEHTY
+- Jos jompikumpi menee väärin, niin kirjautuminen ei onnistu ja tulee virheviesti OSIN TEHTY
 
 Kirjautumisen jälkeen:
 - Käyttäjä voi luoda uuden muistiinpanon tai tutkia vanhoja muistiinpanoja OSIN TEHTY

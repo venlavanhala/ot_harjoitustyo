@@ -9,5 +9,8 @@
 - 21.4. 5h käyttöliittymän tekeminen
 - 22.4. 3h uusien services-funktioiden tekeminen
 - 26.4. 5h käyttöliittymän muokkaus
+- 28.4. 3h käyttöliittymän muokkaus
+- 29.4. 4h virheiden korjaamista ja parantelua
+- 2.5. 4h funktioiden lisääminen, virheiden korjaus, docstringit
 
-- yhteensä 29 tuntia
+- yhteensä 40 tuntia

@@ -2,7 +2,17 @@ from tkinter import ttk, constants
 from services.notefavors import notefavors
 
 class SignUpScreen:
+    """
+    Rekisteröintinäkymä
+    """
     def __init__(self, root, login):
+        """
+        Luokan konstruktori
+
+        Args: 
+        root : juuri
+        login : Kutsutaan login arvoa kun kirjaudutaan sisään
+        """
         self._root=root
         self._frame=None
         self._username=None
@@ -11,6 +21,9 @@ class SignUpScreen:
         self.format()
 
     def create_user(self):
+        """
+        Uuden käyttäjän luomisen hoitava metodi
+        """
         name=self._username.get()
         password=self._password.get()
         notefavors.sign_up(name, password)
