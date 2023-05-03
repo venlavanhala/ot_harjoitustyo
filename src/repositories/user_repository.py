@@ -41,7 +41,10 @@ class UserTools:
         cursor=self._database.cursor()
         person=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
         self._database.commit()
-        return person!=None
+        if person==None:
+            return False
+        else:
+            return True
 
     def remove_users(self):
         cursor = self._database.cursor()
@@ -57,7 +60,7 @@ class UserTools:
     def find_user(self, sign, word):
         cursor = self._database.cursor()
         user = cursor.execute("SELECT name, password from Users where name=? and password=?", [
-                              sign, word]).fetchone()
+                              sign, word]).fetchone()[0]
         self._database.commit()
         return user
 

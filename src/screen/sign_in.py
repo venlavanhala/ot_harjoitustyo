@@ -1,5 +1,5 @@
 from tkinter import ttk, constants
-from services.notefavors import notefavors
+from services.notefavors import notefavors, InvalidCredentialsError
 
 
 class SignInScreen:
@@ -20,8 +20,12 @@ class SignInScreen:
         try:
             notefavors.sign_in(name, password)
             self.login
-        except:
-            raise Exception("Kirjautuminen ei onnistunut")
+        except InvalidCredentialsError:
+            raise ("Kirjautuminen ei onnistu")
+        #if notefavors.sign_in(name, password)==None:
+            #raise Exception("Kirjautuminen ei onnistunut")
+        #else:
+            #self._user=notefavors.sign_in(name, password)
 
     def pack(self):
         self._frame.pack(fill=constants.X)
@@ -31,11 +35,12 @@ class SignInScreen:
 
     def format(self):
         self._frame = ttk.Frame(master=self._root)
-        label = ttk.Label(master=self._root, text="Kirjaudu sisään")
-        self._username = ttk.Entry(master=self._root, text="Käyttäjänimi")
-        self._password = ttk.Entry(master=self._root, text="Salasana")
-        enter = ttk.Button(master=self._root, text="Enter", command=self.signin)
-        signing = ttk.Button(master=self._root, text="Rekisteröidy", command=self.signup)
+        label = ttk.Label(master=self._frame, text="Kirjaudu sisään", background = "#BFBFEF")
+        self._username = ttk.Entry(master=self._frame, text="Käyttäjänimi")
+        self._password = ttk.Entry(master=self._frame, text="Salasana")
+        #self.signin
+        enter = ttk.Button(master=self._frame, text="Enter", command=self.signin)
+        signing = ttk.Button(master=self._frame, text="Rekisteröidy", command=self.signup)
 
         label.pack()
         self._username.pack()

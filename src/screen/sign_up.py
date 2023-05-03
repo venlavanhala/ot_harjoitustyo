@@ -38,11 +38,11 @@ class SignUpScreen:
 
     def format(self):
         self._frame=ttk.Frame(master=self._root)
-        label=ttk.Label(master=self._root, text="Uuden käyttäjän luonti")
-        self._username=ttk.Entry(master=self._root, text="Käyttäjänimi")
-        self._password=ttk.Entry(master=self._root, text="Salasana")
-        enter=ttk.Button(master=self._root, text="Luo", command=self.create_user)
-        signing=ttk.Button(master=self._root, text="Kirjaudu sisään", command=self.login)
+        label=ttk.Label(master=self._frame, text="Uuden käyttäjän luonti", background = "#BFBFEF")
+        self._username=ttk.Entry(master=self._frame, text="Käyttäjänimi")
+        self._password=ttk.Entry(master=self._frame, text="Salasana")
+        enter=ttk.Button(master=self._frame, text="Luo", command=self.create_user)
+        signing=ttk.Button(master=self._frame, text="Kirjaudu sisään", command=self.login)
 
         label.pack()
         self._username.pack()

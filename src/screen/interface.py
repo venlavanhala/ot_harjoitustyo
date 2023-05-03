@@ -12,7 +12,7 @@ class Interface:
         self.sign_view()
 
     def remove_view(self):
-        if self._view:
+        if self._view!=None:
             self._view.remove_screen()
         self._view = None
 
