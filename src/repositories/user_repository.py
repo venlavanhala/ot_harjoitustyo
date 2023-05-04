@@ -60,14 +60,14 @@ class UserTools:
     def find_user(self, sign, word):
         cursor = self._database.cursor()
         user = cursor.execute("SELECT name, password from Users where name=? and password=?", [
-                              sign, word]).fetchone()[0]
+                              sign, word]).fetchone()
         self._database.commit()
-        return user
+        return User(user[0], user[1])
 
     def find_id(self, person):
         cursor=self._database.cursor()
-        user=cursor.execute("SELECT id from Users where name=?",[person.name]).fetchone()
+        user=cursor.execute("SELECT id from Users where name=?",[person]).fetchone()
         self._database.commit()
-        return user
+        return user[0]
 
 user_repository=UserTools(get_database_connection())

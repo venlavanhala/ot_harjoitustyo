@@ -38,7 +38,7 @@ class NoteFavors:
 
     def sign_in(self, name, password):
         find=self._user_repository.find_user(name, password)
-        if not find:
+        if not find or find==None:
             raise InvalidCredentialsError("Käyttäjää ei löytynyt")
         self._user=find
         return find
@@ -51,7 +51,7 @@ class NoteFavors:
             return list(notes)
 
     def new_note(self, content):
-        note=Note(self._user, content)
+        note=Note(self._user.id, content)
         note_repository.new_note(note)
         return note
 

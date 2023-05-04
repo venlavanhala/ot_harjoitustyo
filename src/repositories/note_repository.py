@@ -1,5 +1,6 @@
 
 from connect_database import get_database_connection
+from repositories.user_repository import user_repository
 from entities.note import Note
 
 
@@ -34,8 +35,9 @@ class NoteTools:
         self._database.commit()
 
     def all_notes(self, user):
+        identity=user_repository.find_id(user.name)
         cursor = self._database.cursor()
-        every = cursor.execute("SELECT day, content from Notes where user_id=?", [user]).fetchall()
+        every = cursor.execute("SELECT day, content from Notes where user_id=?", [identity]).fetchall()
         return every
 
 note_repository = NoteTools(get_database_connection())

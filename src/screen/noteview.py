@@ -1,4 +1,4 @@
-from tkinter import ttk, constants
+from tkinter import ttk, constants, StringVar
 from services.notefavors import notefavors
 
 class NoteScreen:
@@ -8,6 +8,7 @@ class NoteScreen:
         self._user=notefavors.current_user()
         self._notes=notefavors.return_notes(self._user)
         self.logout=logout
+        self._variable=None
         self.newnote=None
         self.format()
 
@@ -41,3 +42,5 @@ class NoteScreen:
         self.newnote.pack()
         enter.pack()
         out.pack()
+
+        # muistiinpano ilmestyy kenttään ja pysyy siellä vaikka kirjaudutaan välissä ulos
