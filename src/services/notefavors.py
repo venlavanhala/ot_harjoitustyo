@@ -52,7 +52,7 @@ class NoteFavors:
 
     def new_note(self, content):
         note=Note(self._user, content)
-        NoteTools.new_note(note)
+        note_repository.new_note(note)
         return note
 
 notefavors=NoteFavors()

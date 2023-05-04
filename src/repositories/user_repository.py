@@ -64,9 +64,9 @@ class UserTools:
         self._database.commit()
         return user
 
-    def find_id(self, name):
+    def find_id(self, person):
         cursor=self._database.cursor()
-        user=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
+        user=cursor.execute("SELECT id from Users where name=?",[person.name]).fetchone()
         self._database.commit()
         return user
 
