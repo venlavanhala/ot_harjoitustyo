@@ -8,7 +8,7 @@ class NoteScreen:
         self._user=notefavors.current_user()
         self._notes=notefavors.return_notes(self._user)
         self.logout=logout
-        self._variable=None
+        self._note_variable=StringVar()
         self.newnote=None
         self.format()
 
@@ -26,10 +26,13 @@ class NoteScreen:
         self._frame.pack(fill=constants.X)
 
     def format_note(self, note):
-        noteframe = ttk.Frame(master=self._frame)
-        content = ttk.Label(master=noteframe, text=(note.day, note.content), font=('Times', 18))
-        noteframe.pack()
+        #noteframe = ttk.Frame(master=self._frame)
+        content = ttk.Label(master=self._frame, text=note, font=('Times', 18))
+        #noteframe.pack()
         content.pack()
+
+    def store(self):
+        self._note_variable.set("")
 
     def format(self):
         self._frame = ttk.Frame(master=self._root)
@@ -37,9 +40,9 @@ class NoteScreen:
         for note in self._notes:
             self.format_note(note)
         new=ttk.Label(master=self._frame, text="Uusi muistiinpano", background = "#BFBFEF")
-        self.newnote=ttk.Entry(master=self._frame, text="teksti: ")
+        self.newnote=ttk.Entry(master=self._frame, text="teksti: ", textvariable=self._note_variable)
         self.new_note
-        enter=ttk.Button(master=self._frame, text="Enter")
+        enter=ttk.Button(master=self._frame, text="Enter", command=self.store)
         out=ttk.Button(master=self._frame, text="Kirjaudu ulos", command=self.logout)
         header.pack()
         new.pack()
