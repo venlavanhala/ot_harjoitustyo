@@ -25,13 +25,17 @@ class NoteScreen:
     def pack(self):
         self._frame.pack(fill=constants.X)
 
+    def format_note(self, note):
+        noteframe = ttk.Frame(master=self._frame)
+        content = ttk.Label(master=noteframe, text=(note.day, note.content), font=('Times', 18))
+        noteframe.pack()
+        content.pack()
+
     def format(self):
         self._frame = ttk.Frame(master=self._root)
-        header=ttk.Label(master=self._frame, text="Muistiinpanosi", background = "#BFBFEF")
-        #self.all_notes()
+        header=ttk.Label(master=self._frame, text="Muistiinpanosi", font=('Times', 20), background = "#BFBFEF")
         for note in self._notes:
-            content=ttk.Label(master=self._frame, text=note.text)
-            content.pack()
+            self.format_note(note)
         new=ttk.Label(master=self._frame, text="Uusi muistiinpano", background = "#BFBFEF")
         self.newnote=ttk.Entry(master=self._frame, text="teksti: ")
         self.new_note

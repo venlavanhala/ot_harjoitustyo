@@ -38,7 +38,7 @@ class SignUpScreen:
 
     def format(self):
         self._frame=ttk.Frame(master=self._root)
-        label=ttk.Label(master=self._frame, text="Uuden käyttäjän luonti", background = "#BFBFEF")
+        label=ttk.Label(master=self._frame, text="Uuden käyttäjän luonti", background = "#BFBFEF", font=('Times', 20))
         self._username=ttk.Entry(master=self._frame, text="Käyttäjänimi")
         self._password=ttk.Entry(master=self._frame, text="Salasana")
         enter=ttk.Button(master=self._frame, text="Luo", command=self.create_user)
