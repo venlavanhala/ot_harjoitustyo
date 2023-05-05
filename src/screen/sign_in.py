@@ -19,7 +19,7 @@ class SignInScreen:
         password = self._password.get()
         try:
             notefavors.sign_in(name, password)
-            self.login
+            self.login()
         except InvalidCredentialsError:
             raise ("Kirjautuminen ei onnistu")
         #if notefavors.sign_in(name, password)==None:
