@@ -44,15 +44,15 @@ class NoteFavors:
         return find
 
     def return_notes(self, user):
-        if user!=self._user:
-            return []
-        else:
-            notes=self._note_repository.all_notes(user)
-            return list(notes)
+        #if user!=self._user:
+            #return []
+        #else:
+        notes=self._note_repository.all_notes(user)
+        return list(notes)
 
     def new_note(self, content):
         note=Note(self._user.id, content)
-        note_repository.new_note(note)
+        self._note_repository.new_note(note)
         return note
 
 notefavors=NoteFavors()
