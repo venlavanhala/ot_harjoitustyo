@@ -28,7 +28,7 @@ class Interface:
 
     def signup_view(self):
         self.remove_view()
-        self._view=SignUpScreen(self._root, self.note_view)
+        self._view=SignUpScreen(self._root, self.sign_view)
         self._view.pack()
 
 

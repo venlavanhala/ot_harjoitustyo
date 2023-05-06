@@ -24,8 +24,8 @@ class NoteTools:
             note eli muistiinpano
         """
         cursor = self._database.cursor()
-        cursor.execute("INSERT into Notes (user, day, content) values (?,?,?)", [
-                       note.user, note.time, note.text])
+        cursor.execute("INSERT into Notes (user_id, content) values (?,?)", [
+                       note.user, note.text])
         self._database.commit()
         return note
 
@@ -37,7 +37,7 @@ class NoteTools:
     def all_notes(self, user):
         identity=user_repository.find_id(user.name)
         cursor = self._database.cursor()
-        every = cursor.execute("SELECT day, content from Notes where user_id=?", [identity]).fetchall()
+        every = cursor.execute("SELECT content from Notes where user_id=?", [identity]).fetchall()
         return every
 
 note_repository = NoteTools(get_database_connection())

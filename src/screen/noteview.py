@@ -27,7 +27,7 @@ class NoteScreen:
 
     def format_note(self, note):
         #noteframe = ttk.Frame(master=self._frame)
-        content = ttk.Label(master=self._frame, text=note, font=('Times', 18))
+        content = ttk.Label(master=self._root, text=note, font=('Times', 18))
         #noteframe.pack()
         content.pack()
 
