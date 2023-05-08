@@ -48,7 +48,7 @@ class UserTools:
 
     def remove_users(self):
         cursor = self._database.cursor()
-        cursor.execute("DELETE * from Users")
+        cursor.execute("DELETE from Users")
         self._database.commit()
 
     def all_users(self):
@@ -61,13 +61,12 @@ class UserTools:
         cursor = self._database.cursor()
         user = cursor.execute("SELECT id, name, password from Users where name=? and password=?", [
                               sign, word]).fetchone()
-        id=cursor.lastrowid
+        #id=cursor.lastrowid
         self._database.commit()
         if not user or user==None:
             return user
         else:
-            return User(id, sign, word)
-
+            return User(user[0], sign, word)
 
     def find_id(self, person):
         cursor=self._database.cursor()

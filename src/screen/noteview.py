@@ -1,6 +1,8 @@
 from tkinter import ttk, constants, StringVar
 from services.notefavors import notefavors
 
+#HUOM! sqlite.row object at ... saattaa johtua siitä, että viitataan väärin User-olioon
+
 class NoteScreen:
     def __init__(self, root, logout):
         self._root=root

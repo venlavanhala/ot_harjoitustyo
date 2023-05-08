@@ -53,9 +53,10 @@ class NoteFavors:
         if not notes or notes==None:
             return None
         else:
-            return list(notes)
+            return notes #oli äsken list(notes)
 
     def new_note(self, content):
-        self._note_repository.new_note(self._id, content)
+        new=self._note_repository.new_note(self._id, content)
+        return new
 
 notefavors=NoteFavors()
