@@ -6,10 +6,10 @@ class NoteScreen:
         self._root=root
         self._frame=None
         self._user=notefavors.current_user()
-        self._notes=notefavors.return_notes(self._user)
+        self._notes=notefavors.return_notes()
         self.logout=logout
         self._note_variable=StringVar()
-        self.newnote=None
+        #self.newnote=None
         self.format()
 
     def remove_screen(self):
@@ -33,10 +33,11 @@ class NoteScreen:
         content.pack()
 
     def initialize_notes(self):
-        notes=ttk.Label(master=self._root, text=self._notes) #pitää olla self notes
+        notes=ttk.Label(master=self._frame, text=self._notes)
         notes.pack()
 
     def store(self):
+        self.new_note()
         self._note_variable.set("")
 
     def format(self):
@@ -44,16 +45,15 @@ class NoteScreen:
         header=ttk.Label(master=self._frame, text="Muistiinpanosi", font=('Times', 20), background = "#BFBFEF")
         #for note in self._notes:
             #self.format_note(note)
-        self.initialize_notes
+        self.initialize_notes()
         new=ttk.Label(master=self._frame, text="Uusi muistiinpano", background = "#BFBFEF")
-        self.newnote=ttk.Entry(master=self._frame, text="teksti: ", textvariable=self._note_variable)
-        self.new_note
+        newnote=ttk.Entry(master=self._frame, textvariable=self._note_variable)
         enter=ttk.Button(master=self._frame, text="Enter", command=self.store)
         out=ttk.Button(master=self._frame, text="Kirjaudu ulos", command=self.logout)
         header.pack()
         #notes.pack()
         new.pack()
-        self.newnote.pack()
+        newnote.pack()
         enter.pack()
         out.pack()
 

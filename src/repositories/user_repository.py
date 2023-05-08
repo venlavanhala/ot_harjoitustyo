@@ -30,10 +30,10 @@ class UserTools:
         """
         if len(user.name)>0 and len(user.password)>0:
             cursor = self._database.cursor()
-            cursor.execute("INSERT into Users (name, password) values (?,?)", [
-                        user.name, user.password])
+            cursor.execute("INSERT into Users (name, password) values (?,?)", [user.name, user.password])
+            last_id=cursor.lastrowid
             self._database.commit()
-            return user
+            return User(last_id, user.name, user.password)
         else:
             raise Exception("Käyttäjänimi tai salasana eivät saa olla tyhjiä")
 
@@ -59,10 +59,15 @@ class UserTools:
 
     def find_user(self, sign, word):
         cursor = self._database.cursor()
-        user = cursor.execute("SELECT name, password from Users where name=? and password=?", [
+        user = cursor.execute("SELECT id, name, password from Users where name=? and password=?", [
                               sign, word]).fetchone()
+        id=cursor.lastrowid
         self._database.commit()
-        return User(user[0], user[1])
+        if not user or user==None:
+            return user
+        else:
+            return User(id, sign, word)
+
 
     def find_id(self, person):
         cursor=self._database.cursor()

@@ -15,7 +15,7 @@ class NoteTools:
         Database on tietokantayhteyden olio
         """
 
-    def new_note(self, note:Note):
+    def new_note(self, id, content):
         """
         Args:
             note (Note) eli yksi uusi muistiinpano
@@ -24,20 +24,20 @@ class NoteTools:
             note eli muistiinpano
         """
         cursor = self._database.cursor()
-        cursor.execute("INSERT into Notes (user_id, content) values (?,?)", [
-                       note.user, note.text])
+        cursor.execute("INSERT into Notes (user_id, content) values (?,?)", [id, content])
         self._database.commit()
-        return note
 
     def remove_notes(self):
         cursor = self._database.cursor()
         cursor.execute("DELETE* from Notes")
         self._database.commit()
 
-    def all_notes(self, user):
-        identity=user_repository.find_id(user.name)
-        cursor = self._database.cursor()
-        every = cursor.execute("SELECT content from Notes where user_id=?", [identity]).fetchall()
-        return every
+    def all_notes(self, id):
+        try:
+            cursor = self._database.cursor()
+            every = cursor.execute("SELECT content from Notes where user_id=?", [id]).fetchone()
+            return every
+        except:
+            return ""
 
 note_repository = NoteTools(get_database_connection())

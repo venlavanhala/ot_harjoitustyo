@@ -19,7 +19,7 @@ def create_tables(database):
     """
     cursor = database.cursor()
     cursor.execute("CREATE table Users (id integer primary key, name text, password text)")
-    cursor.execute("CREATE table Notes (id integer primary key, user_id REFERENCES Users, content text)")
+    cursor.execute("CREATE table Notes (id integer primary key, user_id integer REFERENCES Users(id), content text)")
     database.commit()
 
 

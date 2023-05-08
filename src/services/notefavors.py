@@ -15,6 +15,7 @@ class NoteFavors:
     """
     def __init__(self):
         self._user = None
+        self._id=None
         self._note_repository = note_repository
         self._user_repository = user_repository
 
@@ -28,7 +29,7 @@ class NoteFavors:
         """
         check=self._user_repository.check_if_exist(name)
         if check==False:
-            create = self._user_repository.new_user(User(name, password))
+            create = self._user_repository.new_user(User(0, name, password)) #jos tarvii id, se ovoi olla mikä vaan kai?
             return create
         else:
             raise InvalidCredentialsError("Käyttäjä on jo olemassa")
@@ -41,18 +42,20 @@ class NoteFavors:
         if not find or find==None:
             raise InvalidCredentialsError("Käyttäjää ei löytynyt")
         self._user=find
+        self._id=self._user.id #vai user[0]?
         return find
 
-    def return_notes(self, user):
+    def return_notes(self):
         #if user!=self._user:
             #return []
         #else:
-        notes=self._note_repository.all_notes(user)
-        return list(notes)
+        notes=self._note_repository.all_notes(self._id)
+        if not notes or notes==None:
+            return None
+        else:
+            return list(notes)
 
     def new_note(self, content):
-        note=Note(self._user.id, content)
-        self._note_repository.new_note(note)
-        return note
+        self._note_repository.new_note(self._id, content)
 
 notefavors=NoteFavors()
