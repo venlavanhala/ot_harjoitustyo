@@ -32,12 +32,17 @@ class NoteTools:
         self._database.commit()
 
     def all_notes(self, id):
+        list=[]
         try:
             cursor = self._database.cursor()
             every = cursor.execute("SELECT content from Notes where user_id=?", [id]).fetchall()
-            return every
+            for tuple in every:
+                list.append(tuple)
+            return list
         except:
             return ""
+
+
 
 note_repository = NoteTools(get_database_connection())
 

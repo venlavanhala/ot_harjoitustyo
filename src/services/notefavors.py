@@ -1,9 +1,7 @@
-from entities.note import Note
-from entities.user import User
 
+from entities.user import User
 from repositories.note_repository import note_repository
 from repositories.user_repository import user_repository
-
 
 class InvalidCredentialsError(Exception):
     pass

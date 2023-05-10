@@ -1,6 +1,6 @@
 import unittest
 from entities.user import User
-from services.notefavors import notefavors
+from services.notefavors import NoteFavors, InvalidCredentialsError
 
 class FakeNoteRepository:
     def __init__(self, notes:None):
@@ -52,3 +52,19 @@ class FakeUserRepository:
     def remove_users(self):
         self.users=[]
 
+class TestNoteFavors(unittest.TestCase):
+    def setUp(self):
+        self.notefavors = NoteFavors()
+        self.liisa=User(1, "Liisa", "kissa")
+        self.notefavors.sign_up(self.liisa.name, self.liisa.password)
+
+    def test_creating(self):
+        self.notefavors.new_note("Olipa kerran elämä")
+        notes=self.notefavors.return_notes()
+        self.assertEqual(len(notes), 1)
+
+
+        #self._user = None
+        #self._id=None
+        #self._note_repository = note_repository
+        #self._user_repository = user_repository
