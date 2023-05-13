@@ -10,7 +10,7 @@ Muistion avulla voi merkitä ylös tärkeät asiat ja tarkastella niitä myöhem
 #### [Tuntikirjanpito](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 #### [Ghangelog](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/changelog.md)
 #### [Arkkitehtuuri](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
-#### [Release](https://github.com/venlavanhala/ot_harjoitustyo/releases/tag/viikko7)
+#### [Release](https://github.com/venlavanhala/ot_harjoitustyo/releases/tag/loppupalautus)
 #### [Testausdokumentti](https://github.com/venlavanhala/ot_harjoitustyo/blob/main/dokumentaatio/testaus.md)
 
 ## Asennus
