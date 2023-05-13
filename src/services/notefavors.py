@@ -68,7 +68,7 @@ class NoteFavors:
         notes=self._note_repository.all_notes(self._idnumber)
         if notes:
             return notes
-        elif not notes or notes==None:
+        elif not notes or notes is None:
             return None
 
     def new_note(self, content):
