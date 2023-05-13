@@ -16,8 +16,8 @@ Syötä nimi ja salasana. Jos kirjautuminen ei onnistu, et ole rekisteröitynyt.
 
 ### Rekisteröinti
 
-Syötä valitsemasi käyttäjätunnus ja salasana.
+Syötä valitsemasi käyttäjätunnus ja salasana. Paina tämän jälkeen "Luo" näppäintä, ja sitte "Kirjaudu sisään" -näppäintä.
 
 ### Muistiinpanot
 
-Näät nyt omat muistiinpanosi ja pystyt tehdä niitä lisää.
+Näät nyt omat muistiinpanosi ja pystyt tehdä niitä lisää. Lopuksi voit kirjautua ulos.

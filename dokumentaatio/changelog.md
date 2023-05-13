@@ -19,3 +19,8 @@
 - Saatu Muistiinpano-näyttö näkymään
 - Luotu komento ohjelman alustamiselle
 - Tehty korjauksia toiminnallisuuksiin
+
+## Viikko 7
+- Tehty testit tietokannan käsittelyä koskien
+- Muokattu käyttöliittymää
+- Saatu käyttöliittymän näkymät erillisiksi ja näkymien vaihto toimimaan
