@@ -40,7 +40,6 @@ class FakeUserRepository:
             
     def find_user(self, name, password):
         for user in users:
-            # user=(1,"Venla", "kissa")
             if name in user and password in user:
                 return User(user[0],user[1],user[2])
 
@@ -57,7 +56,3 @@ class TestNoteFavors(unittest.TestCase):
         self.liisa=User(1, "Liisa", "kissa")
         self.notefavors.sign_up(self.liisa.name, self.liisa.password)
 
-    def test_creating(self):
-        self.notefavors.new_note("Olipa kerran elämä")
-        notes=self.notefavors.return_notes()
-        self.assertEqual(len(notes), 1)

@@ -1,7 +1,5 @@
 import unittest
 from repositories.note_repository import note_repository
-from entities.note import Note
-
 
 class TestNoteTools(unittest.TestCase):
     def setUp(self):
@@ -20,3 +18,4 @@ class TestNoteTools(unittest.TestCase):
         note_repository.new_note(self.user_id, self.content)
         all=note_repository.all_notes(self.user_id)
         self.assertEqual(len(all), 2)
+        
