@@ -21,11 +21,23 @@ Sovelluksen tiedot tallennetaan tietokantaan. Tietokantatiedoston nimi on muisti
 NoteTools ja UserTools -nimiset luokat huolehtivat tiedon tallentamisesta ja tiedon hakemisesta.
 Tietokannassa on taulut Users ja Notes, eli käyttäjät ja muistiinpanot ovat eri tauluissa.
 
-### Sekvenssikaavio
+#### Rekisteröinti
 
 Sekvenssikaavio kuvaa rekisteröintiä:
 
 <img src="sekvenssi.png"
 	alt="Sekvenssikaavio" />
 
+#### Kirjautuminen
 
+Kirjautumisessa syötetään salasana, ja sovellus toimii seuraavasti:
+
+<img src="kirjautumiskaavio.png"
+	alt="Sekvenssikaavio" />
+
+#### Muistiinpanojen luonti
+
+Uuden muistiinpanon luontia kuvataan tässä kaaviossa:
+
+<img src="muistiinpanokaavio.png"
+	alt="Sekvenssikaavio" />
