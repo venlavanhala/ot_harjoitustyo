@@ -11,6 +11,12 @@ Ohjelmaa testataan unittest-testien avulla. Testit keskittyvät note- ja user-re
 
 ### Testauskattavuus
 
-<img src="coverage.png"
+<img src="coverageoikea.png"
 	alt="Coverage" />
 
+Testauskattavuus on 57 prosenttia. Testaamatta on jäänyt muun muassa tietokantataulujen luominen.
+
+### Sovelluksen laatuongelmat ja virheet
+
+- Muistiinpanojen palauttamisessa on ongelmia: ohjelma ei tällä hetkellä palauta muistiinpanoja.
+- Virheviestit eivät tulostu ohjelmaan vaan terminaaliin
