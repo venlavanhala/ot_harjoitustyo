@@ -13,7 +13,7 @@ class NoteFavors:
     """
     def __init__(self):
         self._user = None
-        self._id=None
+        self._idnumber=None
         self._note_repository = note_repository
         self._user_repository = user_repository
 
@@ -24,37 +24,59 @@ class NoteFavors:
             name
             password
 
+        Returns:
+        create: Uusi käyttäjäolio
         """
         check=self._user_repository.check_if_exist(name)
-        if check==False:
-            create = self._user_repository.new_user(User(0, name, password)) #jos tarvii id, se ovoi olla mikä vaan kai?
+        if check is False or not check:
+            create = self._user_repository.new_user(User(0, name, password))
             return create
         else:
-            raise InvalidCredentialsError("Käyttäjä on jo olemassa")
+            pass
 
     def current_user(self):
+        """
+        Funktio, joka palauttaa uuden käyttäjän
+        Returns:
+            self._user: Kirjautunut käyttäjä
+        """
         return self._user
 
     def sign_in(self, name, password):
+        """Funktio, joka hoitaa käyttäjän kirjautumisen
+
+        Args:
+            name: Käyttäjän nimi
+            password: Käyttäjän salasana
+
+        Returns:
+            find: Kirjautunut käyttäjä
+        """
         find=self._user_repository.find_user(name, password)
-        if not find or find==None:
+        if not find or find is None:
             raise InvalidCredentialsError("Käyttäjää ei löytynyt")
         self._user=find
-        self._id=self._user.id #vai user[0]?
+        self._idnumber=self._user.idnumber
         return find
 
     def return_notes(self):
-        #if user!=self._user:
-            #return []
-        #else:
-        notes=self._note_repository.all_notes(self._id)
-        if not notes or notes==None:
+        """Funktio, joka palauttaa kirjoitetut muistiinpanot
+
+        Returns:
+            notes: Lista muistiinpanoista
+        """
+        notes=self._note_repository.all_notes(self._idnumber)
+        if notes:
+            return notes
+        elif not notes or notes==None:
             return None
-        else:
-            return notes #oli äsken list(notes)
 
     def new_note(self, content):
-        new=self._note_repository.new_note(self._id, content)
-        return new
+        """Funktio, joka hoitaa muistiinpanojen tallennuksen
+
+        Args:
+            content: Muistiinpanon teksti
+        """
+        self._note_repository.new_note(self._idnumber, content)
 
 notefavors=NoteFavors()

@@ -1,7 +1,5 @@
 
 from connect_database import get_database_connection
-from repositories.user_repository import user_repository
-
 
 class NoteTools:
     """
@@ -17,33 +15,38 @@ class NoteTools:
     def new_note(self, user_id, content):
         """
         Args:
-            note (Note) eli yksi uusi muistiinpano
-
-        Returns:
-            note eli muistiinpano
+            note (Note): uusi muistiinpano
         """
         cursor = self._database.cursor()
         cursor.execute("INSERT into Notes (user_id, content) values (?,?)", [user_id, content])
         self._database.commit()
 
     def remove_notes(self):
+        """
+        Funktio, joka poistaa kaikki tallennetut muistiinpanot
+        """
         cursor = self._database.cursor()
         cursor.execute("DELETE from Notes")
         self._database.commit()
 
-    def all_notes(self, id):
-        list=[]
+    def all_notes(self, idnumber):
+        """
+        Funktio palauttaa tallennetut muistiinpanot listana
+
+        Args:
+            idnumber: Muistiinpanon id-numero
+
+        Returns:
+            notelist: Lista muistiinpanoista
+        """
+        notelist=[]
         try:
             cursor = self._database.cursor()
-            every = cursor.execute("SELECT content from Notes where user_id=?", [id]).fetchall()
-            for tuple in every:
-                list.append(tuple)
-            return list
-        except:
+            every = cursor.execute("SELECT content from Notes where user_id=?", [idnumber]).fetchall()
+            for unit in every:
+                notelist.append(unit)
+            return notelist
+        except Exception:
             return ""
 
-
-
 note_repository = NoteTools(get_database_connection())
-
-

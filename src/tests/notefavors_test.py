@@ -5,7 +5,6 @@ from services.notefavors import NoteFavors, InvalidCredentialsError
 class FakeNoteRepository:
     def __init__(self, notes:None):
         self.notes = notes or []
-        # [(0,"kisu"), (0,"koira"), (3,"haha")]
 
     def all_notes(self):
         return self.notes
@@ -17,9 +16,9 @@ class FakeNoteRepository:
                 users_notes.append(note[0])
         return users_notes
 
-    def new_note(self, id, note):
-        self.notes.append((id, note))
-        return (id, note)
+    def new_note(self, idnumber, note):
+        self.notes.append((idnumber, note))
+        return (idnumber, note)
 
     def remove_notes(self):
         self.notes=[]
@@ -45,9 +44,9 @@ class FakeUserRepository:
             if name in user and password in user:
                 return User(user[0],user[1],user[2])
 
-    def create(self, id, name, password):
-        self.users.append((id, name, password))
-        return User(id, name, password)
+    def create(self, idnumber, name, password):
+        self.users.append((idnumber, name, password))
+        return User(idnumber, name, password)
 
     def remove_users(self):
         self.users=[]
@@ -62,9 +61,3 @@ class TestNoteFavors(unittest.TestCase):
         self.notefavors.new_note("Olipa kerran elämä")
         notes=self.notefavors.return_notes()
         self.assertEqual(len(notes), 1)
-
-
-        #self._user = None
-        #self._id=None
-        #self._note_repository = note_repository
-        #self._user_repository = user_repository

@@ -38,37 +38,50 @@ class UserTools:
             raise Exception("Käyttäjänimi tai salasana eivät saa olla tyhjiä")
 
     def check_if_exist(self, name):
+        """Tarkistaa, onko käyttäjää olemassa
+        """
         cursor=self._database.cursor()
         person=cursor.execute("SELECT id from Users where name=?",[name]).fetchone()
         self._database.commit()
-        if person==None:
-            return False
-        else:
-            return True
+        return person is not None
 
     def remove_users(self):
+        """Poistaa kaikki käyttäjät
+        """
         cursor = self._database.cursor()
         cursor.execute("DELETE from Users")
         self._database.commit()
 
     def all_users(self):
+        """Palauttaa kaikki käyttäjät
+        """
         cursor = self._database.cursor()
-        all = cursor.execute("SELECT * from Users").fetchall()
+        every = cursor.execute("SELECT * from Users").fetchall()
         self._database.commit()
-        return all
+        return every
 
     def find_user(self, sign, word):
+        """Etsii tietyn käyttäjän
+
+        Args:
+            sign: käyttäjänimi
+            word: salasana
+
+        Returns:
+            user: User
+        """
         cursor = self._database.cursor()
         user = cursor.execute("SELECT id, name, password from Users where name=? and password=?", [
                               sign, word]).fetchone()
-        #id=cursor.lastrowid
         self._database.commit()
-        if not user or user==None:
+        if not user or user is None:
             return user
         else:
             return User(user[0], sign, word)
 
     def find_id(self, person):
+        """Etsii käyttäjän nimen perusteella
+        """
         cursor=self._database.cursor()
         user=cursor.execute("SELECT id from Users where name=?",[person]).fetchone()
         self._database.commit()

@@ -28,4 +28,4 @@ class TestUserTools(unittest.TestCase):
         user = user_repository.find_user(self.liisa.name, self.liisa.password)
 
         self.assertEqual(user.name, self.liisa.name)
-        self.assertEqual(user[0], self.liisa.id)
+        self.assertEqual(user.idnumber, 1)

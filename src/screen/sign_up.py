@@ -27,16 +27,20 @@ class SignUpScreen:
         name=self._username.get()
         password=self._password.get()
         notefavors.sign_up(name, password)
-        #except:
-            #raise Exception("Samanniminen käyttäjä on jo olemassa")
 
     def pack(self):
+        """Pakkaa näkymän
+        """
         self._frame.pack(fill=constants.X)
 
     def remove_screen(self):
+        """Poistaa näkymän
+        """
         self._frame.destroy()
 
     def format(self):
+        """Määrittää, mitä näkymään tulee
+        """
         self._frame=ttk.Frame(master=self._root)
         label=ttk.Label(master=self._frame, text="Uuden käyttäjän luonti", background = "#BFBFEF", font=('Times', 20))
         self._username=ttk.Entry(master=self._frame, text="Käyttäjänimi")
