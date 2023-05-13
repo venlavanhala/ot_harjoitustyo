@@ -11,6 +11,6 @@ Ohjelmaa testataan unittest-testien avulla. Testit keskittyvät note- ja user-re
 
 ### Testauskattavuus
 
-<img src="covergae.png"
+<img src="coverage.png"
 	alt="Coverage" />
 
