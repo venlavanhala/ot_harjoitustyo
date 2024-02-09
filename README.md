@@ -2,6 +2,7 @@
 
 Muistion avulla voi merkitä ylös tärkeät asiat ja tarkastella niitä myöhemmin.
 
+![Muistion kirjautumissivu](muistiokuva.png)
 
 ## Kurssi: Ohjelmistotekniikka
 
