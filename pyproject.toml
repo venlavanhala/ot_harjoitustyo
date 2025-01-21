@@ -1,28 +1,17 @@
-[tool.poetry]
-name = "ot_harjoitustyo"
+[project]
+name = "ot-harjoitustyo"
 version = "0.1.0"
 description = ""
-authors = ["Venla Vanhala <venla.e.vanhala@gmail.com>"]
+authors = [
+    {name = "venlavanhala",email = "venla.e.vanhala@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.8"
+dependencies = [
+    "cowsay (>=6.1,<7.0)"
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-cowsay = "^5.0"
-pytest = "^7.2.2"
-invoke = "^2.0.0"
-
-[tool.poetry.dev-dependencies]
-
-[tool.poetry.group.dev.dependencies]
-coverage = "^7.2.2"
-pylint = "^2.17.2"
-autopep8 = "^2.0.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry.group.new_group]
-optional = true
-
-[tool.poetry.group.new_group.dependencies]
-tensorflow = "*"
