@@ -1,0 +1,3 @@
+- Käyttäjät User sisältävät luultavasti turhaan id:n
+- Jos tarkistetaan ettei samannimisiä tule, ei tarvitse id:tä varmaan 
+id:tä tietokantataulussa?
